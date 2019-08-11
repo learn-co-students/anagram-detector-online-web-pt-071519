@@ -14,7 +14,7 @@ class Anagram
 #splittine into indv letters and sorting each word and
 #comparing it to original
 #return empty array if no matches
-    array.select {|x| x.split("").sort == @name.split("").sort}
+    @name.split("").sort == array.select {|x| x.split("").sort}
   end
 
 end
