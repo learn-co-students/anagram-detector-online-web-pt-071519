@@ -5,12 +5,10 @@ class Anagram
   
   def initialize(word)
     @word = word 
-  end 
-  
-  def match(words_array)
-    words_array.select do |word| 
-      @word.split("").sort == word.split("").sort 
-    end
   end
   
+  def match(array)
+    array.select {|w| w.split("").sort == @word.split("").sort}
+    #binding.pry
+  end
 end
